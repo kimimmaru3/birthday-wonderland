@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f7">
+  <meta name="description" content="A little birthday wonderland made just for you.">
+  <title>Birthday Wonderland ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topline"><span>✦ A LITTLE MAGIC FOR YOUR SPECIAL DAY ✦</span></header>
+
+    <section class="hero" id="home">
+      <div class="floating balloon balloon-a" aria-hidden="true">🎈</div>
+      <div class="floating balloon balloon-b" aria-hidden="true">🎈</div>
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+      <div class="cake" aria-hidden="true">🎂</div>
+      <h1>Happy Birthday<span>!</span></h1>
+      <p class="subtitle">A little wonderland filled with wishes, smiles, and surprises.</p>
+
+      <div class="name-panel">
+        <label for="birthdayName">Who are we celebrating?</label>
+        <div class="name-row">
+          <input id="birthdayName" type="text" maxlength="45" placeholder="Enter a name..." autocomplete="off">
+          <button class="name-button" id="personalizeBtn" type="button">Make it magic ✨</button>
+        </div>
+        <p class="hint">You can change the name anytime.</p>
+      </div>
+      <p class="welcome" id="welcome" aria-live="polite">A little magic is waiting for you, birthday star! 💗</p>
+    </section>
+
+    <section class="surprises" aria-labelledby="surpriseTitle">
+      <div class="section-title">
+        <span class="ornament">✿</span>
+        <div>
+          <h2 id="surpriseTitle">Your Little Surprises</h2>
+          <p>Choose a gift and see what's inside</p>
+        </div>
+        <span class="ornament">✿</span>
+      </div>
+
+      <div class="gift-grid">
+        <button class="gift gift-pink" type="button" data-gift="wish">
+          <span class="gift-art" aria-hidden="true">🎁</span>
+          <span class="gift-name">A Birthday Wish</span>
+          <span class="gift-caption">A wish from the heart</span>
+          <span class="gift-action">TAP TO OPEN ↗</span>
+        </button>
+        <button class="gift gift-mint" type="button" data-gift="letter">
+          <span class="gift-art" aria-hidden="true">💌</span>
+          <span class="gift-name">A Little Letter</span>
+          <span class="gift-caption">Words just for you</span>
+          <span class="gift-action">TAP TO OPEN ↗</span>
+        </button>
+        <button class="gift gift-lilac" type="button" data-gift="joy">
+          <span class="gift-art" aria-hidden="true">🧸</span>
+          <span class="gift-name">A Pocket of Joy</span>
+          <span class="gift-caption">A tiny reminder</span>
+          <span class="gift-action">TAP TO OPEN ↗</span>
+        </button>
+        <button class="gift gift-peach" type="button" data-gift="finale">
+          <span class="gift-art" aria-hidden="true">💝</span>
+          <span class="gift-name">One Last Surprise</span>
+          <span class="gift-caption">Save the best for last</span>
+          <span class="gift-action">TAP TO OPEN ↗</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-stars" aria-hidden="true">✧　♡　✧</div>
+      <p>Made with love, sprinkles, and a little bit of magic.</p>
+      <span>🌷 ✨ 🎀 ✨ 🌷</span>
+    </footer>
+  </main>
+
+  <dialog id="giftDialog" class="gift-dialog">
+    <button class="close-dialog" id="closeDialog" type="button" aria-label="Close">×</button>
+    <div class="dialog-icon" id="dialogIcon" aria-hidden="true">🎁</div>
+    <p class="dialog-kicker">A LITTLE SURPRISE FOR YOU</p>
+    <h2 id="dialogTitle">A Birthday Wish</h2>
+    <p id="dialogText" class="dialog-text"></p>
+    <button class="primary-button" id="confettiButton" type="button">More magic! ✨</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
