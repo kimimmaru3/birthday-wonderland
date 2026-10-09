@@ -100,7 +100,7 @@ button {
 h1 {
   position: relative;
   z-index: 1;
-  margin: -4px 0 22px;
+  margin: 8px 0 32px;
   padding: 0 0 4px;
   color: #9a4790;
   font: 400 clamp(2.6rem, 9vw, 4.7rem)/1.45 'Pacifico', cursive;
