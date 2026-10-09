@@ -597,3 +597,6 @@ footer p {
     transition-duration: .01ms !important;
   }
 }
+
+.music-btn { position: fixed; right: 16px; bottom: 16px; z-index: 20; width: 52px; height: 52px; border: 0; border-radius: 50%; font-size: 1.5rem; cursor: pointer; background: linear-gradient(130deg, #f78dbf, #c58fe5); box-shadow: 0 5px 0 #b767aa30, 0 10px 20px #c68bb233; }
+.music-btn.playing { animation: bob 2s ease-in-out infinite; }
