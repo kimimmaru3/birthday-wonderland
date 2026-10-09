@@ -113,3 +113,13 @@ function burstConfetti(amount) {
 }
 
 createFloatingDecorations();
+
+const bgm = document.getElementById("bgm");
+const musicBtn = document.getElementById("musicBtn");
+bgm.volume = 0.6;
+
+musicBtn.addEventListener("click", () => {
+  if (bgm.paused) bgm.play(); else bgm.pause();
+});
+bgm.addEventListener("play", () => musicBtn.classList.add("playing"));
+bgm.addEventListener("pause", () => musicBtn.classList.remove("playing"));
