@@ -118,8 +118,28 @@ const bgm = document.getElementById("bgm");
 const musicBtn = document.getElementById("musicBtn");
 bgm.volume = 0.6;
 
+function startMusic() {
+  return bgm.play().then(removeUnlock).catch(() => {});
+}
+
+const unlockEvents = ["pointerdown", "keydown", "touchstart"];
+function removeUnlock() {
+  unlockEvents.forEach(e => document.removeEventListener(e, unlockMusic));
+}
+function unlockMusic(event) {
+  if (event.target.closest && event.target.closest("#musicBtn")) return;
+  startMusic();
+}
+
+// 1) try to autoplay right away (works on some desktop browsers)
+startMusic();
+// 2) if blocked, start on the first tap/click/key anywhere
+unlockEvents.forEach(e => document.addEventListener(e, unlockMusic));
+
+// 🎵 button still works as play/pause
 musicBtn.addEventListener("click", () => {
   if (bgm.paused) bgm.play(); else bgm.pause();
+  removeUnlock();
 });
 bgm.addEventListener("play", () => musicBtn.classList.add("playing"));
 bgm.addEventListener("pause", () => musicBtn.classList.remove("playing"));
